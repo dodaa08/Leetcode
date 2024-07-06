@@ -1,4 +1,4 @@
-package Leetcode;
+// package Leetcode;
 // import java.util.ArrayList;
 // import java.util.Arrays;
 
@@ -879,3 +879,11 @@ import java.util.Vector;
 //     }
 
 // }
+
+
+public class main{
+    static void func(){}
+    public static void main(String[] args){
+
+    }
+}
