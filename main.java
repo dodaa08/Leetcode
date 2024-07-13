@@ -829,7 +829,6 @@ import java.util.Vector;
 //         int n = a.length;
 //         Vector<Integer> positive, negative;
 
-
 //         for(int i=0;i<n;i++){
 //             if (a[i]>0) {
 //                 positive.addElement(a[i]);
@@ -880,10 +879,402 @@ import java.util.Vector;
 
 // }
 
+// public class main {
+//     static int max(int a, int b) {
+//         int result = 0;
+//         if (a > b) {
+//             result = a;
+//         } else {
+//             result = b;
+//         }
+
+//         return result;
+//     }
+
+//     static int min(int a, int b) {
+//         int result = 0;
+//         if (a < b) {
+//             result = a;
+//         } else {
+//             result = b;
+//         }
+
+//         return result;
+//     }
+
+//     static int buystocks(int prices[]) { // generate max profit for me.
+//         int mini = prices[0], n = prices.length;
+//         int maxprof = 0;
+//         for (int i = 1; i < n; i++) {
+//             int cost = prices[i] - mini;
+//             maxprof = max(maxprof, cost); // finding a time to sell the stock (keep on updating both.)
+//             mini = min(mini, prices[i]);  // finding the time to buy a stock. (keep on updating both.)
+//         }
+//         return maxprof;
+//     }   
+
+//     public static void main(String[] args) {
+//         int prices[] = { 2, 4, 1 };
+//         System.out.print(buystocks(prices));
+//     }
+// }
+
+// encrypt a string: 
+
+// public class main {
+//     static String getEncryptedString(String s, int k) {
+//         int n = s.length();
+//         StringBuilder result = new StringBuilder();
+//         for (int i = 0; i < n; i++) {
+//             result.append(s.charAt((i + k) % n));
+//         }
+
+//         return result.toString();
+//     }
+
+//     public static void main(String[] args) {
+//         String word = "dart";
+//         System.out.print(getEncryptedString(word, 3));
+//     }
+// }
+
+// public class main {
+//     static int max(int a, int b) {
+//         int result;
+//         if (a > b) {
+//             result = a;
+//         } else {
+//             result = b;
+//         }
+//         return result;
+//     }
+
+//     static ArrayList<Integer> leaders(int n, int arr[]) {
+//         ArrayList<Integer> list = new ArrayList<>();
+//         int max = Integer.MIN_VALUE;
+//         // int n = a.length;
+//         for (int i = n - 1; i >= 0; i--) {
+//             if (arr[i] > max) {
+//                 list.add(arr[i]);
+//             }
+//             max = max(max, arr[i]);
+//         }
+
+//         return list;
+//     }
+
+//     public static List< Integer > superiorElements(int []arr) {
+//         ArrayList<Integer> list = new ArrayList<>();
+//         int max = Integer.MIN_VALUE;
+//         int n = arr.length;
+//         for (int i = n - 1; i >= 0; i--) {
+//             if (arr[i] > max) {
+//                 list.add(arr[i]);
+//             }
+//             max = max(max, arr[i]);
+//         }
+
+//         return list;
+//     }
+
+//     public static void main(String[] args) {
+//         int array[] = { 16, 17, 4, 3, 5, 2 };
+//         System.out.print(leaders(array.length, array));
+//     }
+// }
+
+// public class main{
+//     static String getEncryptedString(String s, int k) {
+//         StringBuilder result = new StringBuilder();
+//         int n = s.length();
+//         for(int i=0;i<n;i++){
+//             result.append(s.charAt((i+k)%n)); // Put the character of specific index in a string.
+//         }
+
+//         return result.toString();
+//     }
+
+//     public static void main(String[] args){
+//         Scanner in = new Scanner(System.in);
+//         System.out.print("Enter a Value: ");
+//         String word = in.nextLine();
+
+//         System.out.print(getEncryptedString(word, 3));
+//     }
+// }
+
+// public class main {
+//     static int max(int a, int b) {
+//         int result;
+//         if (a > b) {
+//             result = a;
+//         } else {
+//             result = b;
+//         }
+//         return result;
+//     }
+
+//     static int longestConsecutive(int[] nums) {
+//         Arrays.sort(nums);
+//         int longest = 1, count =0,  lastsmall= Integer.MIN_VALUE, n = nums.length;
+//         for(int i=0;i<n;i++){
+//             if(nums[i]-1==lastsmall){
+//                 count++;
+//                 lastsmall = nums[i];
+//             }
+//             else if(nums[i]!=lastsmall){
+//                 count++;
+//                 lastsmall = nums[i];
+//             }
+//             longest = max(longest, count);
+//         }
+//         return count;
+
+//     }
+
+//     public static void main(String[] args) {
+//         int array[] = { 100,4,200,1,3,2};
+//         System.out.print(longestConsecutive(array));
+//     }
+// }
+
+// Binary search: 
+
+// public class main {
+//     static int search(int[] nums, int target) {
+//         int n = nums.length;
+//         int i = 0, j = n - 1;
+//         int mid = 0;
+//         while (i < j) {
+//             mid = (i + j) / 2;
+//             if (nums[mid] == target) {
+//                 return mid;
+//             } else if (nums[mid] < target) {
+//                 i = mid + 1;
+//             } else if (nums[mid] > target) {
+//                 j = mid - 1;
+//             }
+
+//         }
+
+//         return -1;
+//     }
+
+//     public static void main(String[] args) {
+//         int array[] = { -1, 0, 3, 5, 9, 12 };
+//         System.out.print(search(array, 9));
+//     }
+// }
+
+// best time to sell and buy the stocks
+// public class main {
+//     static int max(int a, int b) {
+//         int result;
+//         if (a > b) {
+//             result = a;
+//         } else {
+//             result = b;
+//         }
+//         return result;
+//     }
+
+//     static int min(int a, int b) {
+//         int result = 0;
+//         if (a < b) {
+//             result = a;
+//         } else {
+//             result = b;
+//         }
+
+//         return result;
+//     }
+
+//     static int maxProfit(int[] prices) {
+//         int n = prices.length;
+//         int maxprofit = 0;
+//         int minval = Integer.MAX_VALUE;
+//         for (int i = 1; i < n; i++) {
+//             int cost = prices[i] - minval;
+//             maxprofit = max(maxprofit, cost);
+//             minval = min(minval, prices[i]);
+//         }
+//         return maxprofit;
+//     }
+
+//     public static void main(String[] args) {
+//         int array[] = { 7,1,5,3,6,4};
+//         System.out.print(maxProfit(array));
+//     }
+// }
+
+// Longest consecutive sequence: 
+
+// brute/ bettter approach now its time for an optimal one.
+// public class main {
+
+//     static int max(int a, int b) {
+//         int result;
+//         if (a > b) {
+//             result = a;
+//         } else {
+//             result = b;
+//         }
+//         return result;
+//     }
+
+//     static int longestConsecutive(int[] nums) {
+
+//         Arrays.sort(nums);
+//         int count = 0;
+//         int n = nums.length;
+//         int max = Integer.MIN_VALUE;
+//         int countmax = 0;
+//         for (int i = 0; i < n; i++) {
+//             if (nums[i] == max + 1) {
+//                 count++;
+//                 max = nums[i];
+//             } else if (nums[i] != max) {
+//                 count = 1;
+//                 max = nums[i];
+//             }
+//             countmax = max(countmax, count);
+//         }
+//         return countmax;
+//     }
+
+//     public static void main(String[] args) {
+//         int array[] = { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
+//         System.out.print(longestConsecutive(array));
+//     }
+// }
+
+// optimal: 
+
+// public class main{
+//     public static int longestSuccessiveElements(int []a) {
+//         int n = a.length;
+//         if (n == 0) return 0;
+//         int longest = 1;
+
+//         Set<Integer> set= new HashSet<>();
+//         for(int i=0;i<n;i++){
+//             set.add(a[i]);
+//         }
+
+//         for(int i: set){
+//             if(!set.contains(i-1)){
+//                int count = 1;
+//                 int x =i;
+//                 while(set.contains(x+1)){
+//                      x= x+1;
+//                      count = count+1;
+//                 }
+//                 longest = Math.max(longest, count);
+//             }
+//         }
+
+//             return longest;
+//     }   
+//      public static void main(String[] args){
+//         int array[] = {5, 8, 3, 2, 1, 4};
+//         System.out.print(longestSuccessiveElements(array)); 
+//     }
+// }
+
+// public class main {
+//     static int findLongestConseqSubseq(int arr[], int N) {
+//         // Arrays.sort(arr);
+//         int count = 0;
+//         int longest = Integer.MIN_VALUE;
+//         Set<Integer> set = new HashSet<>();
+
+//         for (int i = 0; i < N; i++) {
+//             set.add(arr[i]);
+//         } // O(N)
+
+//         for (int I : set) {
+//             if (!set.contains(I - 1)) {
+//                 count = 1;
+//                 int x = I;
+
+//                 while (set.contains(x + 1)) {
+//                     count++;
+//                     x++;
+//                 }
+//             } // O(log N)
+//             longest = Math.max(longest, count);
+//         }
+
+//         // space = O(1)
+
+//         return longest;
+//     }
+
+//     public static void main(String[] args) {
+//         int array[] = { 0 };
+//         System.out.print(findLongestConseqSubseq(array, array.length));
+//     }
+// }
+
+
+
+// public class main{
+//     static ArrayList<ArrayList<Integer>> zeroMatrix(ArrayList<ArrayList<Integer>> matrix, Integer n, Integer m) {
+//         int row[] = new int[n];
+//         int col[] = new int[m];
+
+//         for(int i=0;i<row.length;i++){
+//             row[i] = 0;
+//         }
+//         for(int i=0;i<col.length;i++){
+//             col[i] = 0;
+//         }
+
+//         for(int i=0;i<n;i++){
+//             for(int j =0;j<m;j++){
+//              if(matrix.get(i).get(j) == 0){
+//                 row[i] = 1;
+//                 col[j] = 1;
+//              }
+
+//             }
+//         }
+//         for(int i=0;i<n;i++){
+//             for(int j=0;j<m;j++){
+//                 if(row[i] ==1 || col[j]==1){
+//                     matrix.get(i).get() = 0;
+//                 }
+//             }
+//         }
+
+
+//         return matrix;
+//     }
+//     public static void main(String[] args){
+//     }
+// }
+
 
 public class main{
-    static void func(){}
-    public static void main(String[] args){
+    public int subarraySum(int[] nums, int k) {
+        int count = 0, n = nums.length;
 
+
+        for(int i=0;i<n;i++){
+            for(int j = i;j<n;j++){
+                int sum =0;
+                for(int k = i;k<j;k++){
+                    sum+=nums[k];
+                }
+                if(sum==k){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args){
+        int array[] = {1,1,1};
+       
     }
 }
